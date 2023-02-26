@@ -1,0 +1,215 @@
+/* Global Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 15px;
+}
+
+/* Header Styles*/
+header {
+  background-color: #334193;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  box-shadow: 0 20px 12px 12px rgba(19, 19, 19, 0.5);
+  z-index: 2;
+}
+
+header > .menu-btn {
+  position: absolute;
+  left: 20px;
+}
+
+header > .menu-btn img {
+  height: 40px;
+  cursor: pointer;
+}
+
+header > .header-title {
+  margin: 0;
+  font-size: 24px;
+  color: #fff;
+  font-weight: 400;
+}
+
+header > .header-logo {
+  position: absolute;
+  right: 20px;
+  padding-top: 5px;
+}
+
+header > .header-logo img {
+  height: 55px;
+}
+
+/* Hambuger or Nav Menu */
+nav.menu {
+  width: 280px;
+  min-height: calc(100vh); /* minimum height of 100% of the viewport heigh */
+  background-color: #334193;
+  left: -300px;
+  transition: 0.5s ease;
+  margin-top: 10px;
+  z-index: 3;
+  position: fixed;
+}
+
+nav.menu > a {
+  display: block;
+  padding: 5px;
+  margin: 15px 0 0 20px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 2.5rem;
+  cursor: pointer;
+}
+
+nav.menu > a:hover {
+  color: #badefa;
+}
+
+/* Content Styles */
+.content {
+  max-width: 1200px;
+  margin: 50px auto 0 auto;
+}
+
+.main-image {
+  width: 100%;
+  margin-bottom: 20px;
+  margin-top: 0;
+  position: relative;
+  height: auto;
+}
+
+.main-image img {
+  width: 100%;
+  z-index: -1;
+  display: block;
+  height: auto;
+}
+
+.main-image-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 4.5rem;
+  text-align: center;
+  z-index: 1;
+}
+
+.main-content-text {
+  padding-bottom: 30px;
+}
+
+.main-content-text h1 {
+  font-size: 4rem;
+  border-bottom: 0.5px solid #ced2d4;
+}
+
+.main-event-wrapper {
+  padding: 20px 0 20px 0;
+}
+
+.main-event-item {
+  padding: 20px 0 20px 0;
+}
+
+.main-event-item h2 {
+  color: #008000;
+  font-size: 2.5rem;
+  font-weight: 400;
+  text-decoration: 2px underline #008000;
+  text-underline-offset: 0.15em;
+  text-decoration-skip-ink: none;
+  padding-bottom: 20px;
+}
+
+.main-event-item h3 {
+  font-size: 1.8rem;
+  padding-top: 20px;
+}
+
+.main-event-item p {
+  font-size: 1.3rem;
+}
+
+/* footer {
+  height: 50px;
+  background-color: #494949;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  bottom: 0;
+  position: fixed;
+  width: 100%;
+} */
+
+.menu_show {
+  left: 0 !important;
+}
+
+/* If viewport width is below 1200 pixels, the width of the content element is set to 100% */
+@media screen and (max-width: 1200px) {
+  .content,
+  .main-image {
+    width: 100%;
+  }
+}
+
+/* If viewport width is below 800 pixels, all font sizes change */
+@media screen and (max-width: 800px) {
+  header > .menu-btn img {
+    height: 30px;
+  }
+
+  header > .header-logo img {
+    height: 45px;
+  }
+
+  nav.menu {
+    width: 200px;
+  }
+
+  nav.menu > a {
+    font-size: 1.7rem;
+  }
+
+  .main-image-text {
+    font-size: 1.8rem;
+  }
+
+  .main-event-wrapper {
+    padding: 0 20px 0 20px;
+  }
+
+  .main-content-text h1 {
+    font-size: 2.5rem;
+    padding: 0 20px 0 20px;
+  }
+
+  .main-event-item h2 {
+    font-size: 1.5rem;
+  }
+
+  .main-event-item h3 {
+    font-size: 1.2rem;
+  }
+
+  .main-event-item p {
+    font-size: 0.8rem;
+  }
+}
